@@ -30,7 +30,7 @@ The website communicates the initiative's work across three pillars:
 ## Project structure
 
 ```text
-SKHW_updated/
+.
 ├── index.html
 ├── about.html
 ├── programs.html
@@ -43,7 +43,7 @@ SKHW_updated/
         └── styles.css
 ```
 
-All pages use the shared stylesheet at `SKHW_updated/assets/css/styles.css`. The stylesheet contains the site's design tokens, typography, layout helpers, responsive behavior, form styles, navigation, cards, animations, and page-specific utility classes.
+All pages use the shared stylesheet at `assets/css/styles.css`. The stylesheet contains the site's design tokens, typography, layout helpers, responsive behavior, form styles, navigation, cards, animations, and page-specific utility classes.
 
 ## Running the site locally
 
@@ -52,21 +52,21 @@ This is a static HTML site and does not require a build step or package installa
 From the repository root, start any local static server. For example, with Python:
 
 ```bash
-python -m http.server 8000 --directory SKHW_updated
+python -m http.server 8000
 ```
 
 Then open [http://localhost:8000](http://localhost:8000) in a browser.
 
-You can also open `SKHW_updated/index.html` directly, although a local server is recommended for consistent browser behavior.
+You can also open `index.html` directly, although a local server is recommended for consistent browser behavior.
 
 ## Forms and integrations
 
 The forms currently use placeholder endpoints and simulate a successful submission when no backend endpoint is configured. Before launch, replace the placeholder values with the organisation's chosen form or payment service:
 
-- Sponsorship enquiry form in `sponsor.html`
-- School-supplies donation form in `donate.html`
-- Monetary donation form in `donate.html`
-- Contact, registration, and other site forms
+- Partnership, sponsorship, supplies, monetary-gift, and volunteer information in
+  `partnership.html`
+- Registration form embedded in `register.html`
+- Contact and enquiry links in `contact.html`
 
 Payment processing is not currently connected. The monetary donation form captures the donor's intent until a live payment provider is configured.
 
